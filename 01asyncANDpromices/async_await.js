@@ -13,7 +13,7 @@ function checkMaxDivisibleByFive(arr) {
 
 async function runCheck() {
   try {
-    const max = await checkMaxDivisibleByFive([12, 45, 23, 50, 37]);
+    const max = await checkMaxDivisibleByFive([12, 45, 23, 51, 37]);
     console.log("Max divisible by 5:", max);
   } catch (error) {
     console.log("Error:", error, "is NOT divisible by 5");
