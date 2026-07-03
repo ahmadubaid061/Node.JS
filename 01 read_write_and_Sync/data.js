@@ -5,7 +5,7 @@ const person1 = {
 
 const person2 = {
   name: "Ahmad",
-  year_of_birth: 2004,
+  year_of_birth: 2005,
 };
 
 const data = [person1, person2];
