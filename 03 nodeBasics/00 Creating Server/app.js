@@ -10,12 +10,11 @@ const server = http.createServer((req, res) => {
   console.log(req.method, req.url); // log specific fields, not the whole object
   res.statusCode = 200;
   res.setHeader("Content-Type", "text/plain");
-
-  // --
-  res.setHeader("Content-Type", "text/html");
-  //importing html
-  res.write("<html> <h2> Hello this is html responce </h2> </html>");
-  res.end("Hello, world!"); // this line is what actually completes the response
+  if (req.url === "/") {
+    res.end("Hello,this is home page!");
+  } else if (req.url === "/about") {
+    res.end("Hello, this is about page"); //we can also  import html file here
+  }
 });
 
 //server.listen tells server to listen to requests and it runs infinitly
