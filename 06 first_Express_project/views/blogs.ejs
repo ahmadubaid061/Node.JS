@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 My Blog</h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>All Blog Posts</h2>
+            <div class="blog-list">
+                <% blogs.forEach(blog=> { %>
+                    <div class="blog-card">
+                        <h3>
+                            <a href="/blog/<%= blog.id %>">
+                                <%= blog.title %>
+                            </a>
+                        </h3>
+                        <p class="meta">By <%= blog.author %> | <%= blog.date %>
+                        </p>
+                        <p class="excerpt">
+                            <%= blog.content.substring(0, 100) %>...
+                        </p>
+                        <div class="tags">
+                            <% blog.tags.forEach(tag=> { %>
+                                <span class="tag">
+                                    <%= tag %>
+                                </span>
+                                <% }) %>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 My Express Blog</p>
+        </footer>
+    </div>
+</body>
+
+</html>

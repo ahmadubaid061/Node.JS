@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 My Blog</h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <article class="blog-post">
+                <h2>
+                    <%= blog.title %>
+                </h2>
+                <p class="meta">By <%= blog.author %> | <%= blog.date %>
+                </p>
+                <div class="content">
+                    <p>
+                        <%= blog.content %>
+                    </p>
+                </div>
+                <div class="tags">
+                    <% blog.tags.forEach(tag=> { %>
+                        <span class="tag">
+                            <%= tag %>
+                        </span>
+                        <% }) %>
+                </div>
+                <a href="/" class="back-link">← Back to all blogs</a>
+            </article>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 My Express Blog</p>
+        </footer>
+    </div>
+</body>
+
+</html>
