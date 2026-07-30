@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "06 first_Express_project/index.js",
+      "src": "index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "06 first_Express_project/index.js"
+      "dest": "index.js"
     }
   ]
 }
