@@ -14,6 +14,8 @@ app.get("/portfolio", (req, res) => {
   res.send("this is my portfolio page.");
 });
 
+
+//the app.listen funciton creates an http server and then listen it on the given port
 app.listen(port, () => {
   console.log(`App is listening on port : ${port}`);
 });
